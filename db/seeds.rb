@@ -5,3 +5,42 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+puts "Killing the DB...."
+
+Product.destroy_all
+User.destroy_all
+
+puts "Adding new infos..."
+
+
+user = User.create(name: Faker::Name.name, email: Faker::Internet.email)
+
+5.times do |p|
+Product.create(name: Faker::Name.name,
+  description: Faker::Lorem,
+  price_per_day: '50',
+  category: 'Ski',
+  user: user)
+end
+
+5.times do |p|
+Product.create(name: Faker::Name.name,
+  description: Faker::Lorem,
+  price_per_day: '50',
+  category: 'Trekking',
+  user: user)
+end
+
+5.times do |p|
+Product.create(name: Faker::Name.name,
+  description: Faker::Lorem,
+  price_per_day: '50',
+  category: 'cycling',
+  user: user)
+end
+
+
+  puts "Created #{Product.count} products !!"
+  puts "Created #{User.count} users !!"
