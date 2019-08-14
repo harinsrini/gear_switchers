@@ -9,8 +9,7 @@
   height: 200px;
   width: 100%;
   object-fit: cover;
-  padding-top: 10px;
-  padding-left: 5px;
+
 }
 
 .card-category-sking h2 {
@@ -32,6 +31,7 @@
   top: -20px;
   width: 40px;
 }
+
 .card-category-sking p {
   font-size: 12px;
   opacity: .7;
@@ -142,8 +142,6 @@
   height: 200px;
   width: 100%;
   object-fit: cover;
-  padding-top: 10px;
-  padding-left: 5px;
 }
 
 .card-category-cycling h2 {
@@ -178,10 +176,32 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
+
 }
 .cards-cat-cycle-1{
   width: 100%;
   grid-gap: 20px;
   display: flex;
-  padding-bottom: 40px;
+  padding-bottom: 120px;
+}
+.verif {
+  text-align: right;
+  padding-right: 10px;
+}
+.cards-cat-cycle-pricing {
+  font-size: 12px;
+  text-align: right;
+  padding-right: 10px;
+
+}
+.cards-cat-trek-pricing {
+  font-size: 12px;
+  text-align: right;
+  padding-right: 10px;
+}
+.card-category-pricing {
+  font-size: 12px;
+  text-align: right;
+  padding-right: 10px;
+
 }
