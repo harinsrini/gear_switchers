@@ -1,1 +1,46 @@
+<div class="banner" >
+  <h1> Discover "RentMyOutdoor"</h1>
+
+    <div class="cards">
+        <h2> Adventures </h2>
+           <p> Explore the different adventures around you </p>
+    </div>
+    <div class="cards">
+        <h2> Experiences </h2>
+           <p> Shared experiences by others </p>
+    </div>
+    <div class="cards">
+        <h2> Places to go </h2>
+           <p> Explore the different places around you </p>
+    </div>
+
+    <div class="flex" >
+
+          <% @products.each do |product| %>
+            <div class="card-category-sking">
+            <%#= link_to product_path(product) do %>
+              <img src="http://www.mechanicsofsport.com/skiing/equipment/graphics/boots/ski-boots.png" />
+              <div class="card-trip-infos">
+                <div>
+                  <h2><%= product.name %></h2>
+                  <p>Short description here!</p>
+                </div>
+                <h2 class="card-trip-pricing">£99.99</h2>
+                  <p>Verified</p>
+                </div>
+              </div>
+            </div>
+
+          <% end %>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
 
