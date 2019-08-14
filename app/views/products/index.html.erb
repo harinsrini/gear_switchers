@@ -63,8 +63,9 @@
           <div class="cards-cat-cycle-1">
             <% @products_trek.each do |product| %>
                 <div class="card-category-cycling">
-                  <%#= link_to product_path(product) do %>
+                  <%= link_to product_path(product) do %>
                     <img src="https://files.slack.com/files-pri/T02NE0241-FM0JPQJR0/moto-sport-rouge_1159-812.jpg"/>
+                    <% end %>
                     <div class="cards-cat-cycle-infos">
                       <div>
                         <h2><%= product.name %></h2>
