@@ -1,33 +1,62 @@
 
-  <div class="cards">
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://image.freepik.com/photos-gratuite/moto-sport-rouge_1159-812.jpg?1">
-      Product
+  <div class="full-block">
+    <div class="full-block-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://image.freepik.com/photos-gratuite/moto-sport-rouge_1159-812.jpg?1">
     </div>
 
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://image.freepik.com/photos-gratuite/gros-plan-disque-frein-mecanique-nomme-velo-eclair-artificiel-rouge_88135-888.jpg)">
-      Description
+    <div class="card-small-1">
+      <div class="card-category-1" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://image.freepik.com/photos-gratuite/gros-plan-disque-frein-mecanique-nomme-velo-eclair-artificiel-rouge_88135-888.jpg)">
+      </div>
+
+      <div class="card-category-2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://image.freepik.com/free-vector/money_53876-25501.jpg)">
+      </div>
     </div>
 
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://image.freepik.com/free-vector/money_53876-25501.jpg)">
-     Price
+    <div class="full-block-category-1" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://files.slack.com/files-pri/T02NE0241-FM5Q6HC9X/moto-sport-rouge_1159-812.jpg)">
     </div>
   </div>
 
-<form action="" method="get" class="form-example">
-  <div class="form-example">
-    <label for="date">From: </label>
-    <input type="text" date="date" id="date" required>
+
+<div class="flex-1">
+  <div class="body-1">
+    <div class="flex">
+      <div class="body-1-a">
+        <h4><%= @product.category %></h4>
+        <p><%= @product.address %></p>
+
+        <p><%= @product.description %></p>
+      </div>
+
+      <div class="avatar1">
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob">
+      </div>
+
+    </div>
   </div>
-  <div class="form-example">
-    <label for="date">to: </label>
-    <input type="text" date="date" id="date" required>
+
+  <div class="booking">
+    <div class="price">
+      <p><%= @product.price_per_day%> price per day</p>
+    </div>
+    <div class="booking-1">
+      <form action="" method="get" class="form-example">
+        <div class="form-example">
+          <label for="date">From: </label>
+            <input type="text" date="date" id="date" required>
+        </div>
+        <div class="form-example">
+          <label for="date">to: </label>
+            <input type="text" date="date" id="date" required>
+        </div>
+        <div class="form-example">
+          <label for="number">Number of persons: </label>
+            <input type="text" number="number" id="number">
+        <div class="form-example">
+          <input type="submit" value="Book now!">
+        </div>
+      </form>
+    </div>
   </div>
-  <div class="form-example">
-    <label for="number">Number of persons: </label>
-    <input type="text" number="number" id="number"
-  <div class="form-example">
-    <input type="submit" value="Book now!">
-  </div>
-</form>
+</div>
+
 
 
