@@ -1,31 +1,44 @@
 class ProductsController < ApplicationController
 
   def show
+    raise
     @product = Product.find(params[:id])
+
   end
 
   def index
-    @products_ski = Product.where(category: "Ski")
-    @products_trek = Product.where(category: "Trekking")
-    @products_cycle = Product.where(category: "cycling")
+    if params[:query].present?
+
+      @products_ski = Product.where(category: "Ski").search_by_name_and_description(params[:query])
+      @products_trek = Product.where(category: "Trekking").search_by_name_and_description(params[:query])
+      @products_cycle = Product.where(category: "cycling").search_by_name_and_description(params[:query])
+
+    else
+      @products_ski = Product.where(category: "Ski")
+      @products_trek = Product.where(category: "Trekking")
+      @products_cycle = Product.where(category: "cycling")
+
+    end
   end
 
   def new
     @product = Product.new
+    @product.user = current_user
   end
 
   def create
     @product = Product.new(product_params)
     @product.user = current_user
-      if @product.save
-        redirect_to products_path #notice :"Restaurant created"
-      else
-        render :new
-      end
+    if @product.save
+      redirect_to products_path # notice :"Restaurant created"
+    else
+      render :new
+    end
   end
 
   def edit
     @product = Product.find(params[:id])
+    @product.user = current_user
   end
 
   def update
@@ -34,6 +47,14 @@ class ProductsController < ApplicationController
     @product.user = current_user
     @product.save
     redirect_to products_path # index (single product) page
+  end
+
+  def destroy
+    @product = Product.find(params[:id])
+    @product.user = current_user
+    @product.destroy
+    # no need for app/views/restaurants/destroy.html.erb
+    redirect_to products_path
   end
 
   private
