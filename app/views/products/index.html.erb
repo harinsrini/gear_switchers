@@ -21,8 +21,10 @@
           <div class="cards-cat-1">
             <% @products_ski.each do |product| %>
                 <div class="card-category-sking">
-                  <%#= link_to product_path(product) do %>
-                    <img src="https://static.turbosquid.com/Preview/2014/05/26__11_05_33/Atomic_Ski_n_Boots_01.jpg09dac410-4eaf-4244-ba21-aaddec04c963Original.jpg"/>
+                  <%= link_to edit_product_path(product) do %>
+                  <%= link_to "Update", edit_product_path(product), class: "btn btn-primary" %>
+                  <%= cl_image_tag (product.photo), height: 300, width: 400, crop: :fill %>
+                  <% end %>
                     <div class="card-category-infos">
                       <div>
                         <h2><%= product.name %></h2>
@@ -42,8 +44,10 @@
           <div class="cards-cat-trek-1">
             <% @products_trek.each do |product| %>
                 <div class="card-category-treking">
-                  <%#= link_to product_path(product) do %>
-                    <img src="https://www.lanaustore.com/24528/canes-columbus-trekking-tk1.jpg?image=1"/>
+                  <%= link_to edit_product_path(product) do %>
+                  <%= link_to "Update", edit_product_path(product), class: "btn btn-primary" %>
+                  <%= cl_image_tag (product.photo), height: 300, width: 400, crop: :fill %>
+                  <% end %>
                     <div class="cards-cat-trek-infos">
                       <div>
                         <h2><%= product.name %></h2>
@@ -61,10 +65,11 @@
       <h4> Explore cycling </h4>
         <div class='cards-cat-cycle'></div>
           <div class="cards-cat-cycle-1">
-            <% @products_trek.each do |product| %>
+            <% @products_cycle.each do |product| %>
                 <div class="card-category-cycling">
                   <%= link_to product_path(product) do %>
-                    <img src="https://files.slack.com/files-pri/T02NE0241-FM0JPQJR0/moto-sport-rouge_1159-812.jpg"/>
+                  <%= link_to "Update", edit_product_path(product), class: "btn btn-primary" %>
+                    <%= cl_image_tag (product.photo), height: 300, width: 400, crop: :fill %>
                     <% end %>
                     <div class="cards-cat-cycle-infos">
                       <div>
