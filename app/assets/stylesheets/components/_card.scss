@@ -1,0 +1,205 @@
+
+.card-category-sking {
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 0 20px 0 20px;
+}
+
+.card-category-sking > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+
+}
+
+.card-category-sking h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  padding: 2px;
+}
+.card-category-infos.card-category-pricing p{
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative
+}
+.card-category-infos.card-category-pricing h2{
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+.card-category-sking p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+  padding-left: 2px;
+}
+
+.cards p{
+  align-content: center;
+}
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  height:200px;
+  padding-bottom: 20px;
+
+}
+.card-category {
+  background-position: center;
+  background-size: cover;
+  color:white;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 20px 0 20px;
+}
+.card-category p {
+  font-size: 16px;
+  opacity: 0.8;
+}
+.cards-cat{
+  margin: 8px 8px 8px 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+.cards-cat-1{
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.card-category-treking {
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 0 20px 0 20px;
+}
+
+.card-category-treking > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+.card-category-treking h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  padding: 2px;
+}
+.cards-cat-trek-infos.cards-cat-trek-pricing p{
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative
+}
+.cards-cat-trek-infos.cards-cat-trek-pricing h2{
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+.card-category-treking p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+  padding-left: 5px;
+}
+
+.cards-cat-trek{
+  padding-top: 10px;
+  margin: 8px 8px 8px 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+.cards-cat-trek-1{
+  width: 100%;
+  grid-gap: 20px;
+  display: flex;
+  padding-bottom: 20px;
+}
+
+
+.card-category-cycling {
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 0 20px 0 20px;
+}
+
+.card-category-cycling img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-category-cycling h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  padding: 2px;
+}
+.cards-cat-cycle-infos.cards-cat-cycle-pricing p{
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative
+}
+.cards-cat-cycle-infos.cards-cat-cycle-pricing h2{
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+.card-category-cycling p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+  padding-left: 2px;
+}
+
+.cards-cat-cycle{
+  padding-top: 10px;
+  margin: 8px 8px 8px 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+
+}
+.cards-cat-cycle-1{
+  width: 100%;
+  grid-gap: 20px;
+  display: flex;
+  padding-bottom: 120px;
+}
+.verif {
+  text-align: right;
+  padding-right: 10px;
+}
+.cards-cat-cycle-pricing {
+  font-size: 12px;
+  text-align: right;
+  padding-right: 10px;
+
+}
+.cards-cat-trek-pricing {
+  font-size: 12px;
+  text-align: right;
+  padding-right: 10px;
+}
+.card-category-pricing {
+  font-size: 12px;
+  text-align: right;
+  padding-right: 10px;
+
+}

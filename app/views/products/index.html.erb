@@ -1,1 +1,90 @@
 
+    <div class="cards">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1555859044-c72aeb5c17f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)">
+        Adventures
+        <p> Explore the different adventures around you </p>
+      </div>
+
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1497501849790-78f74380d9d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)">
+        Experiences
+        <p> Shared experiences by others </p>
+      </div>
+
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1496428451601-6a656890cca6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)">
+        Places to explore
+        <p> Explore the different places around you </p>
+      </div>
+
+    </div>
+      <h4> Explore Ski </h4>
+        <div class='cards-cat'></div>
+          <div class="cards-cat-1">
+            <% @products_ski.each do |product| %>
+                <div class="card-category-sking">
+                  <%#= link_to product_path(product) do %>
+                    <img src="https://static.turbosquid.com/Preview/2014/05/26__11_05_33/Atomic_Ski_n_Boots_01.jpg09dac410-4eaf-4244-ba21-aaddec04c963Original.jpg"/>
+                    <div class="card-category-infos">
+                      <div>
+                        <h2><%= product.name %></h2>
+                        <p><%= product.description %></p>
+                      </div>
+                      <h3 class="card-category-pricing">£99.99</h3>
+                      <p class="verif"><strong>Verified</strong></p>
+                    </div>
+                </div>
+            <% end %>
+          </div>
+        </div>
+
+
+      <h4> Explore Trekking </h4>
+        <div class='cards-cat-trek'></div>
+          <div class="cards-cat-trek-1">
+            <% @products_trek.each do |product| %>
+                <div class="card-category-treking">
+                  <%#= link_to product_path(product) do %>
+                    <img src="https://www.lanaustore.com/24528/canes-columbus-trekking-tk1.jpg?image=1"/>
+                    <div class="cards-cat-trek-infos">
+                      <div>
+                        <h2><%= product.name %></h2>
+                        <p><%= product.description %></p>
+                      </div>
+                        <h3 class="cards-cat-trek-pricing">£99.99</h3>
+                        <p class="verif"><strong>Verified</strong></p>
+                    </div>
+                </div>
+            <% end %>
+          </div>
+        </div>
+
+
+      <h4> Explore cycling </h4>
+        <div class='cards-cat-cycle'></div>
+          <div class="cards-cat-cycle-1">
+            <% @products_trek.each do |product| %>
+                <div class="card-category-cycling">
+                  <%= link_to product_path(product) do %>
+                    <img src="https://files.slack.com/files-pri/T02NE0241-FM0JPQJR0/moto-sport-rouge_1159-812.jpg"/>
+                    <% end %>
+                    <div class="cards-cat-cycle-infos">
+                      <div>
+                        <h2><%= product.name %></h2>
+                        <p><%= product.description %></p>
+                      </div>
+                        <h3 class="cards-cat-cycle-pricing">£99.99</h3>
+                        <p class="verif"><strong>Verified</strong></p>
+                    </div>
+                </div>
+            <% end %>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
