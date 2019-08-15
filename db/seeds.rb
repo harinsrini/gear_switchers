@@ -20,6 +20,7 @@ user = User.create(name: Faker::Name.name, email: Faker::Internet.email)
 5.times do |p|
 Product.create(name: Faker::Name.name,
   description: Faker::Lorem.sentence,
+  address: Faker::Address.full_address,
   price_per_day: '50',
   category: 'Ski',
   user: user)
@@ -28,6 +29,7 @@ end
 5.times do |p|
 Product.create(name: Faker::Name.name,
   description: Faker::Lorem.sentence,
+  address: Faker::Address.full_address,
   price_per_day: '50',
   category: 'Trekking',
   user: user)
@@ -36,6 +38,7 @@ end
 5.times do |p|
 Product.create(name: Faker::Name.name,
   description: Faker::Lorem.sentence,
+  address: Faker::Address.full_address,
   price_per_day: '50',
   category: 'cycling',
   user: user)
