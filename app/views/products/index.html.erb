@@ -1,6 +1,16 @@
+  <div class="form col-sm-4">
+    <%= form_tag products_path, method: :get do %>
+    <%= text_field_tag :query,
+    params[:query],
+    class: "form-control rounded",
+    placeholder: "Search"%>
+    <%#= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+
 
     <div class="cards">
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1555859044-c72aeb5c17f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)">
+      <div class="card-category view overlay zoom" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1555859044-c72aeb5c17f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)">
         Adventures
         <p> Explore the different adventures around you </p>
       </div>
@@ -14,70 +24,87 @@
         Places to explore
         <p> Explore the different places around you </p>
       </div>
-
     </div>
-      <h4> Explore Ski </h4>
-        <div class='cards-cat'></div>
-          <div class="cards-cat-1">
-            <% @products_ski.each do |product| %>
+
+
+              <% if @products_ski.count > 0 %>
+                  <h4> Explore Ski </h4>
+                <% end %>
+              <div class="cards-cat-1">
+              <% @products_ski.each do |product| %>
                 <div class="card-category-sking">
-                  <%#= link_to product_path(product) do %>
-                    <img src="https://static.turbosquid.com/Preview/2014/05/26__11_05_33/Atomic_Ski_n_Boots_01.jpg09dac410-4eaf-4244-ba21-aaddec04c963Original.jpg"/>
+                  <%= link_to "Update", edit_product_path(product), class: "btn btn-primary" %>
+                  <%= link_to "Delete", product_path(product), method: :delete, class: "btn btn-primary",
+                    data: { confirm: "Are you sure?" } %>
+
+                  <%= cl_image_tag (product.photo), height: 300, width: 400, crop: :fill %>
+
                     <div class="card-category-infos">
                       <div>
                         <h2><%= product.name %></h2>
                         <p><%= product.description %></p>
                       </div>
-                      <h3 class="card-category-pricing">£99.99</h3>
+                      <h3 class="card-category-pricing"><%= product.price_per_day %></h3>
                       <p class="verif"><strong>Verified</strong></p>
                     </div>
                 </div>
-            <% end %>
+              <% end %>
           </div>
-        </div>
 
+          <% if @products_trek.count > 0 %>
+              <h4> Explore Trekking </h4>
+            <% end %>
+            <div class="cards-cat-trek-1">
 
-      <h4> Explore Trekking </h4>
-        <div class='cards-cat-trek'></div>
-          <div class="cards-cat-trek-1">
             <% @products_trek.each do |product| %>
                 <div class="card-category-treking">
-                  <%#= link_to product_path(product) do %>
-                    <img src="https://www.lanaustore.com/24528/canes-columbus-trekking-tk1.jpg?image=1"/>
+                  <%= link_to "Update", edit_product_path(product), class: "btn btn-primary" %>
+
+                  <%= link_to "Delete", product_path(product), class: "btn btn-primary",
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } %>
+
+                  <%= cl_image_tag (product.photo), height: 300, width: 400, crop: :fill %>
+
                     <div class="cards-cat-trek-infos">
                       <div>
                         <h2><%= product.name %></h2>
                         <p><%= product.description %></p>
                       </div>
-                        <h3 class="cards-cat-trek-pricing">£99.99</h3>
+                        <h3 class="cards-cat-trek-pricing"><%= product.price_per_day %></h3>
                         <p class="verif"><strong>Verified</strong></p>
                     </div>
                 </div>
             <% end %>
           </div>
-        </div>
 
+          <% if @products_cycle.count > 0 %>
+              <h4> Explore cycling </h4>
+            <% end %>
+            <div class="cards-cat-cycle-1">
 
-      <h4> Explore cycling </h4>
-        <div class='cards-cat-cycle'></div>
-          <div class="cards-cat-cycle-1">
-            <% @products_trek.each do |product| %>
+            <% @products_cycle.each do |product| %>
                 <div class="card-category-cycling">
-                  <%= link_to product_path(product) do %>
-                    <img src="https://files.slack.com/files-pri/T02NE0241-FM0JPQJR0/moto-sport-rouge_1159-812.jpg"/>
+                  <%= link_to "Update", edit_product_path(product), class: "btn btn-primary" %>
+                  <%= link_to "Delete", product_path(product), class: "btn btn-primary",
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } %>
+                    <%= link_to product_path(product) do %>
+                    <%= cl_image_tag (product.photo), height: 300, width: 400, crop: :fill %>
                     <% end %>
                     <div class="cards-cat-cycle-infos">
                       <div>
                         <h2><%= product.name %></h2>
                         <p><%= product.description %></p>
                       </div>
-                        <h3 class="cards-cat-cycle-pricing">£99.99</h3>
+                        <h3 class="cards-cat-cycle-pricing"><%= product.price_per_day %></h3>
                         <p class="verif"><strong>Verified</strong></p>
                     </div>
                 </div>
             <% end %>
           </div>
-        </div>
+
+
 
 <div
   id="map"

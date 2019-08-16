@@ -1,0 +1,29 @@
+<%#= render 'form', product: @product %>
+
+<%#= link_to, product_path do %>
+
+
+
+
+        <h5><strong>Create your product </strong></h5>
+          <div class="form"></div>
+            <%= simple_form_for(@product) do |f| %>
+            <%= f.input :name, label: "Enter the name of the product"  %>
+            <%= f.input :description, label: "Enter your product description"%>
+            <%= f.input :category, label: "Enter the product category" %>
+            <%= f.input :price_per_day, label: "Enter your desired price"%>
+            <%= f.input :photo %>
+            <%= f.input :photo_cache, as: :hidden %>
+            <%= f.submit "Add a product", method: :create, class: "btn btn-primary" %>
+            <!-- [...] -->
+            <% end %>
+            <div class="container" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1454618454636-a42c7330ccce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);">
+            </div>
+          </div>
+
+
+
+
+
+
+
