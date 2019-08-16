@@ -45,6 +45,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  margin-top: 25px;
+  padding-left: 45px;
+  padding-right:45px;
 }
 
 // Smallest device
@@ -111,3 +114,5 @@
 .footer .fa-heart {
   color: #D23333;
 }
+
+
