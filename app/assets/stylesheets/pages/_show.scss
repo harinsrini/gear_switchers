@@ -2,12 +2,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  height: 450px;
-  margin-left: 10px;
-  margin-right: 10px;
+  height: 350px;
   background-position: center;
-  background-size: cover;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-color: white;
+  margin-bottom: 10px;
 }
 
 .full-block-category {
@@ -69,11 +68,32 @@ label {
     padding-right: 10px;
 }
 
-.avatar1 img {
-  width: 150px;
+.cardy img {
+  width: 200px;
   border-radius: 50%;
   box-shadow: 0 1px 2px r1 imggba(0,0,0,0.2);
   border: white 1px solid;
+  text-align: center;
+  margin-top: 20px;
+
 }
 
+.flex {
+  width: 550px;
+
+}
+
+.card {
+  background-color: grey;
+  text-align: center;
+  padding-top: 60px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 120px;
+  padding-bottom: 80px;
+  color: white;
+
+
+
+}
 
