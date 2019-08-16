@@ -3,8 +3,6 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
 
     @booking = Booking.new
-
-
   end
 
   def index
@@ -57,6 +55,9 @@ class ProductsController < ApplicationController
     # no need for app/views/restaurants/destroy.html.erb
     redirect_to products_path
   end
+
+
+
 
   private
 
