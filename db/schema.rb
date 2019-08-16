@@ -10,17 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2019_08_16_104309) do
-ActiveRecord::Schema.define(version: 2019_08_15_164029) do
-
-
-
-
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
 
   create_table "bookings", force: :cascade do |t|
     t.bigint "product_id"
@@ -32,6 +25,7 @@ ActiveRecord::Schema.define(version: 2019_08_15_164029) do
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_bookings_on_product_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
 
   create_table "pg_search_documents", force: :cascade do |t|
     t.text "content"
@@ -40,7 +34,6 @@ ActiveRecord::Schema.define(version: 2019_08_15_164029) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["searchable_type", "searchable_id"], name: "index_pg_search_documents_on_searchable_type_and_searchable_id"
-
   end
 
   create_table "products", force: :cascade do |t|

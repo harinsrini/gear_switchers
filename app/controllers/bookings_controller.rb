@@ -5,7 +5,7 @@ class BookingsController < ApplicationController
     @booking.product = @product
     @booking.user = current_user
     if @booking.save
-      redirect_to product_path(@product), notice: "Booking created!!"
+      redirect_to dashboard_path(@product), notice: "Booking created!!"
     else
       render "products/show"
     end

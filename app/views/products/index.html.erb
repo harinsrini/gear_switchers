@@ -1,4 +1,5 @@
-  <div class="form col-sm-4">
+  <div class="form col-sm-4 mt-3 justify-content center">
+
     <%= form_tag products_path, method: :get do %>
     <%= text_field_tag :query,
     params[:query],
@@ -7,6 +8,7 @@
     <%#= submit_tag "Search", class: "btn btn-primary" %>
     <% end %>
   </div>
+
 
 
     <div class="cards">
@@ -33,8 +35,8 @@
               <div class="cards-cat-1">
               <% @products_ski.each do |product| %>
                 <div class="card-category-sking">
-                  <%= link_to "Update", edit_product_path(product), class: "btn btn-primary" %>
-                  <%= link_to "Delete", product_path(product), method: :delete, class: "btn btn-primary",
+                  <%= link_to "Update", edit_product_path(product), class: "btn btn-outline-secondary" %>
+                  <%= link_to "Delete", product_path(product), method: :delete, class: "btn btn btn-outline-secondary",
                     data: { confirm: "Are you sure?" } %>
 
                   <%= cl_image_tag (product.photo), height: 300, width: 400, crop: :fill %>
@@ -44,8 +46,7 @@
                         <h2><%= product.name %></h2>
                         <p><%= product.description %></p>
                       </div>
-                      <h3 class="card-category-pricing"><%= product.price_per_day %></h3>
-                      <p class="verif"><strong>Verified</strong></p>
+
                     </div>
                 </div>
               <% end %>
@@ -58,9 +59,9 @@
 
             <% @products_trek.each do |product| %>
                 <div class="card-category-treking">
-                  <%= link_to "Update", edit_product_path(product), class: "btn btn-primary" %>
+                  <%= link_to "Update", edit_product_path(product), class: "btn btn-outline-secondary" %>
 
-                  <%= link_to "Delete", product_path(product), class: "btn btn-primary",
+                  <%= link_to "Delete", product_path(product), class: "btn btn-outline-secondary",
                     method: :delete,
                     data: { confirm: "Are you sure?" } %>
 
@@ -71,8 +72,6 @@
                         <h2><%= product.name %></h2>
                         <p><%= product.description %></p>
                       </div>
-                        <h3 class="cards-cat-trek-pricing"><%= product.price_per_day %></h3>
-                        <p class="verif"><strong>Verified</strong></p>
                     </div>
                 </div>
             <% end %>
@@ -85,8 +84,8 @@
 
             <% @products_cycle.each do |product| %>
                 <div class="card-category-cycling">
-                  <%= link_to "Update", edit_product_path(product), class: "btn btn-primary" %>
-                  <%= link_to "Delete", product_path(product), class: "btn btn-primary",
+                  <%= link_to "Update", edit_product_path(product), class: "btn btn-outline-secondary" %>
+                  <%= link_to "Delete", product_path(product), class: "btn btn-outline-secondary",
                     method: :delete,
                     data: { confirm: "Are you sure?" } %>
                     <%= link_to product_path(product) do %>
@@ -97,8 +96,8 @@
                         <h2><%= product.name %></h2>
                         <p><%= product.description %></p>
                       </div>
-                        <h3 class="cards-cat-cycle-pricing"><%= product.price_per_day %></h3>
-                        <p class="verif"><strong>Verified</strong></p>
+
+
                     </div>
                 </div>
             <% end %>
