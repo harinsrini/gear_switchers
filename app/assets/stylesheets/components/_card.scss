@@ -1,56 +1,21 @@
 
-@import "card";
 
-.card-trip {
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.card-trip > img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
-}
-
-.card-trip h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card-trip p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
-}
-
-
-.card-trip .card-trip-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-}
-
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
-}
 
 .card-category-sking {
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 0 20px 0 20px;
+  background-position: center;
+  background-size: cover;
+
 }
 
 .card-category-sking > img {
   height: 200px;
   width: 100%;
-  object-fit: cover;
+
+  background-position: center;
+  background-size: cover;
 
 }
 
@@ -80,9 +45,13 @@
   margin: 0;
   padding-left: 2px;
 }
+.cards {
+  padding-bottom: 30px;
+}
 
 .cards p{
   align-content: center;
+  font-family: Helvetica;
 }
 
 .card-category {
@@ -94,6 +63,8 @@
   font-weight: bold;
   text-align: center;
   margin: 0 20px 0 20px;
+  height: 190px;
+
 }
 .card-category p {
   font-size: 16px;
@@ -238,4 +209,63 @@
   padding-right: 10px;
 
 }
+.carding {
+  display: card;
+  justify-content: space-between;
+}
+.carding img {
+  width: 250px;
+  height: 150px;
+  border-radius: 20%;
+  display: grid;
+  box-shadow: 0 1px 2px r1 imggba(0,0,0,0.2);
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  margin-top: 20px;
 
+}
+.carding-cat-infos h2{
+  font-size: 18px;
+  color: white;
+}
+
+.cardings h4 {
+font-size: 28px;
+  color: white;
+}
+.container {
+  display: grid;
+}
+
+.card-category-infos p{
+  font-size: 14px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.card-category-infos h2{
+  font-size: 16px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+.cards-cat-trek-infos p{
+  font-size: 14px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.cards-cat-trek-infos h2{
+  font-size: 16px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+.cards-cat-cycle-infos p{
+  font-size: 14px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+.cards-cat-cycle-infos h2{
+  font-size: 14px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
