@@ -40,7 +40,7 @@ Product.create(name: Faker::Name.name,
   description: Faker::Lorem.sentence,
   address: Faker::Address.full_address,
   price_per_day: '50',
-  category: 'cycling',
+  category: 'Cycling',
   user: user)
 end
 

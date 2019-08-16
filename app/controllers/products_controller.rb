@@ -1,7 +1,6 @@
 class ProductsController < ApplicationController
 
   def show
-    raise
     @product = Product.find(params[:id])
 
   end
@@ -11,12 +10,12 @@ class ProductsController < ApplicationController
 
       @products_ski = Product.where(category: "Ski").search_by_name_and_description(params[:query])
       @products_trek = Product.where(category: "Trekking").search_by_name_and_description(params[:query])
-      @products_cycle = Product.where(category: "cycling").search_by_name_and_description(params[:query])
+      @products_cycle = Product.where(category: "Cycling").search_by_name_and_description(params[:query])
 
     else
       @products_ski = Product.where(category: "Ski")
       @products_trek = Product.where(category: "Trekking")
-      @products_cycle = Product.where(category: "cycling")
+      @products_cycle = Product.where(category: "Cycling")
 
     end
   end
